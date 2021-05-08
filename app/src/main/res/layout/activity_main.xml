@@ -37,7 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:clickable="true"
         app:cardElevation="3dp"
         app:cardCornerRadius="3dp"
         android:focusable="true"
@@ -97,6 +96,7 @@
         android:weightSum="2">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_kamus"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
@@ -134,6 +134,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_testskill"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
@@ -182,6 +183,7 @@
         android:weightSum="2">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_about"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
@@ -221,6 +223,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_laporbug"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
