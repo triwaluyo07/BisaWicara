@@ -12,37 +12,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DASHBOARD"
-            android:textSize="20dp"
-            android:textColor="#595959"/>
-
-
-
-        </LinearLayout>
-
-
+        android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dashb"
+                android:textSize="20sp"
+                android:textColor="#595959"/>
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:clickable="true"
+        android:elevation="16dp"
         app:cardElevation="3dp"
         app:cardCornerRadius="3dp"
         android:focusable="true"
         app:cardBackgroundColor="@color/yellow">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -58,16 +45,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bisa Wicara"
+                    android:text="@string/app_name"
                     android:textColor="@color/black"
-                    android:textSize="23dp" />
+                    android:textSize="23sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Belajar Mudah Bahasa Isyarat"
+                    android:text="@string/app_desc"
                     android:textColor="#5e5e5e"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <RelativeLayout
@@ -79,12 +66,10 @@
                     android:layout_height="50dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:contentDescription="Logo"
+                    android:contentDescription="@string/logo"
                     android:src="@drawable/logoblue" />
             </RelativeLayout>
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
@@ -97,12 +82,14 @@
         android:weightSum="2">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_kamus"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
             android:layout_margin="5dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
+            android:elevation="12dp"
             app:cardCornerRadius="3dp"
             app:cardElevation="3dp"
             android:focusable="true"
@@ -116,30 +103,30 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kamus"
+                    android:text="@string/dictionary"
                     android:textColor="@color/white"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="130dp"
                     android:layout_height="90dp"
                     android:src="@drawable/gb_kamus"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"/>
-
-
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@string/logo" />
             </RelativeLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_testskill"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
             android:layout_margin="5dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
+            android:elevation="12dp"
             app:cardCornerRadius="3dp"
             app:cardElevation="3dp"
             android:focusable="true"
@@ -153,8 +140,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test Skill"
-                    android:textSize="18dp"
+                    android:text="@string/test"
+                    android:textSize="18sp"
                     android:textColor="#5e5e5e"
                     android:textStyle="bold"/>
 
@@ -162,14 +149,11 @@
                     android:layout_width="130dp"
                     android:layout_height="90dp"
                     android:src="@drawable/gb_testskill"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"/>
-
-
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@string/logo" />
             </RelativeLayout>
-
         </androidx.cardview.widget.CardView>
-
     </LinearLayout>
 
     <LinearLayout
@@ -182,12 +166,14 @@
         android:weightSum="2">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_about"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
             android:layout_margin="5dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
+            android:elevation="12dp"
             app:cardCornerRadius="3dp"
             app:cardElevation="3dp"
             android:focusable="true"
@@ -201,32 +187,32 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tentang Kami"
-                    android:textSize="18dp"
+                    android:text="@string/about_us"
+                    android:textSize="18sp"
                     android:textColor="#5e5e5e"
                     android:textStyle="bold"/>
 
                 <ImageView
                     android:layout_width="130dp"
                     android:layout_height="90dp"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
                     android:layout_marginBottom="3dp"
-                    android:src="@drawable/gb_about" />
-
-
+                    android:src="@drawable/gb_about"
+                    android:contentDescription="@string/logo" />
             </RelativeLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_laporbug"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
             android:layout_margin="5dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
+            android:elevation="12dp"
             app:cardCornerRadius="3dp"
             app:cardElevation="3dp"
             android:focusable="true"
@@ -240,8 +226,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lapor Bug"
-                    android:textSize="18dp"
+                    android:text="@string/report_bug"
+                    android:textSize="18sp"
                     android:textColor="@color/white"
                     android:textStyle="bold"/>
 
@@ -249,14 +235,11 @@
                     android:layout_width="130dp"
                     android:layout_height="90dp"
                     android:src="@drawable/gb_bugfix"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"/>
-
-
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@string/logo" />
             </RelativeLayout>
-
         </androidx.cardview.widget.CardView>
-
     </LinearLayout>
 
     <TextView
@@ -264,5 +247,5 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:textAlignment="center"
-        android:text="v.1.0.1"/>
+        android:text="@string/version"/>
 </LinearLayout>
