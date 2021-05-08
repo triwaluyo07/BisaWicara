@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BisaWicara"
-        tools:ignore="AllowBackup">
+        tools:ignore="AllowBackup"
+        android:theme="@style/Theme.BisaWicara">
         <activity
             android:name=".LaporBugActivity"
             android:parentActivityName=".MainActivity"/>
