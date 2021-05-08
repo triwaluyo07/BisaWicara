@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Bisa Wicara</string>
+    <string name="app_desc">Belajar Mudah Bahasa Isyarat</string>
+    <string name="logo">Logo</string>
+    <string name="version">v.1.0.1–build_050821–2248</string>
+    <string name="dashb">DASHBOARD</string>
+    <string name="dictionary">Kamus</string>
+    <string name="test">Test Skill</string>
+    <string name="about_us">Tentang Kami</string>
+    <string name="report_bug">Laporkan Bug</string>
 </resources>
