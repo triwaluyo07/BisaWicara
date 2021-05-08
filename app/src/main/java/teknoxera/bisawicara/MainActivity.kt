@@ -14,8 +14,28 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        IntentActivity()
+    }
+
+    fun IntentActivity()
+    {
         binding.cardKamus.setOnClickListener {
             val intent = Intent(this,KamusActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardTestskill.setOnClickListener {
+            val intent = Intent(this,TestSkillActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardAbout.setOnClickListener {
+            val intent = Intent(this,AboutActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardLaporbug.setOnClickListener {
+            val intent = Intent(this,LaporBugActivity::class.java)
             startActivity(intent)
         }
     }
