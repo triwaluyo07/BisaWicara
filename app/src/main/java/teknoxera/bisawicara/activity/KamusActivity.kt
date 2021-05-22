@@ -1,8 +1,8 @@
-package teknoxera.bisawicara
+package teknoxera.bisawicara.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
+import teknoxera.bisawicara.adapter.SectionPagerAdapter
 import teknoxera.bisawicara.databinding.ActivityKamusBinding
 
 class KamusActivity : AppCompatActivity()
@@ -14,12 +14,12 @@ class KamusActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         binding = ActivityKamusBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val sectionsPagerAdapter = SectionPagerAdapter(this, supportFragmentManager)
+        binding.viewPager.adapter = sectionsPagerAdapter
+        binding.tabs.setupWithViewPager(binding.viewPager)
+
+        supportActionBar?.elevation = 0f
     }
 
-    private fun initRV()
-    {
-        binding.apply {
-            rvDict.layoutManager = GridLayoutManager(this@KamusActivity, 2)
-        }
-    }
 }

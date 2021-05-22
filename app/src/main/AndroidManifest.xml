@@ -12,23 +12,27 @@
         android:theme="@style/Theme.BisaWicara"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".LaporBugActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:name=".activity.LaporBugActivity"
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
-            android:name=".TestSkillActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:name=".activity.TestSkillActivity"
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
-            android:name=".AboutActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:name=".activity.AboutActivity"
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
-            android:name=".KamusActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity">
+            android:name=".activity.KamusActivity"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

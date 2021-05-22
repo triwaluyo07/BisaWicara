@@ -1,4 +1,4 @@
-package teknoxera.bisawicara
+package teknoxera.bisawicara.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -20,22 +20,22 @@ class MainActivity : AppCompatActivity() {
     fun IntentActivity()
     {
         binding.cardKamus.setOnClickListener {
-            val intent = Intent(this,KamusActivity::class.java)
+            val intent = Intent(this, KamusActivity::class.java)
             startActivity(intent)
         }
 
         binding.cardTestskill.setOnClickListener {
-            val intent = Intent(this,TestSkillActivity::class.java)
+            val intent = Intent(this, TestSkillActivity::class.java)
             startActivity(intent)
         }
 
         binding.cardAbout.setOnClickListener {
-            val intent = Intent(this,AboutActivity::class.java)
+            val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
 
         binding.cardLaporbug.setOnClickListener {
-            val intent = Intent(this,LaporBugActivity::class.java)
+            val intent = Intent(this, LaporBugActivity::class.java)
             startActivity(intent)
         }
     }

@@ -8,4 +8,6 @@
     <string name="test">Test Skill</string>
     <string name="about_us">Tentang Kami</string>
     <string name="report_bug">Laporkan Bug</string>
+    <string name="huruf">Huruf</string>
+    <string name="angka">Angka</string>
 </resources>
