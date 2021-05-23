@@ -11,24 +11,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BisaWicara"
         tools:ignore="AllowBackup">
-        <activity
-            android:name=".activity.LaporBugActivity"
-            android:parentActivityName=".activity.MainActivity"/>
-        <activity
-            android:name=".activity.TestSkillActivity"
-            android:parentActivityName=".activity.MainActivity"/>
-        <activity
-            android:name=".activity.AboutActivity"
-            android:parentActivityName=".activity.MainActivity"/>
-        <activity
-            android:name=".activity.KamusActivity"
-            android:parentActivityName=".activity.MainActivity"/>
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.LaporBugActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.TestSkillActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.KamusActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

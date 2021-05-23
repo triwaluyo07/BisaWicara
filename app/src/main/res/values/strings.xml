@@ -2,7 +2,7 @@
     <string name="app_name">Bisa Wicara</string>
     <string name="app_desc">Belajar Mudah Bahasa Isyarat</string>
     <string name="logo">Logo</string>
-    <string name="version">v.1.0.1–build_050821–2248</string>
+    <string name="version">v.1.0.1</string>
     <string name="dashb">DASHBOARD</string>
     <string name="dictionary">Kamus</string>
     <string name="test">Test Skill</string>
@@ -10,4 +10,6 @@
     <string name="report_bug">Laporkan Bug</string>
     <string name="huruf">Huruf</string>
     <string name="angka">Angka</string>
+    <string name="splash_logo">splash logo</string>
+    <string name="btn_lapor">LAPOR</string>
 </resources>

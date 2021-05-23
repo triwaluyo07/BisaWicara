@@ -172,7 +172,7 @@ object KamusDummy {
             KamusEntity(
                 "huruf_x",
                 R.drawable.x,
-                "B"
+                "X"
             )
         )
         huruf.add(
