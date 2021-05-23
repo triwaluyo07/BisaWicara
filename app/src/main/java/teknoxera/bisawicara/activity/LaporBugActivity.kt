@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_lapor_bug.*
+import teknoxera.bisawicara.R
 import teknoxera.bisawicara.databinding.ActivityLaporBugBinding
 
 class LaporBugActivity : AppCompatActivity()
@@ -24,6 +25,8 @@ class LaporBugActivity : AppCompatActivity()
 		super.onCreate(savedInstanceState)
 		binding = ActivityLaporBugBinding.inflate(layoutInflater)
 		setContentView(binding.root)
+
+		supportActionBar?.title = getString(R.string.report_bug)
 
 		btn_send.setOnClickListener {
 			if (input_bug.text.toString() == "")

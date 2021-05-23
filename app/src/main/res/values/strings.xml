@@ -3,7 +3,7 @@
     <string name="app_desc">Belajar Mudah Bahasa Isyarat</string>
     <string name="team_name">TeknoXera</string>
     <string name="logo">Logo</string>
-    <string name="version">v.1.0.1_build–052421–0142</string>
+    <string name="version">v.1.0.1_build–052421–0223</string>
     <string name="dashb">DASHBOARD</string>
     <string name="dictionary">Kamus</string>
     <string name="test">Test Skill</string>
@@ -14,6 +14,7 @@
     <string name="splash_logo">Splash Logo</string>
     <string name="btn_lapor">LAPOR</string>
     <string name="bug_text">Ada "Bug"?\nLapor sekarang!</string>
+    <string name="field_title">Dimana \"Bug\"-nya?</string>
     <string name="bug_hint">Beritahu kami "Bug"-nya</string>
     <string name="about_title">Tim Pengembangan Aplikasi</string>
     <string name="uiux">UI/UX</string>

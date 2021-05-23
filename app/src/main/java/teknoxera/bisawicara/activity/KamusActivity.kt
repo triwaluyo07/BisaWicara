@@ -2,6 +2,7 @@ package teknoxera.bisawicara.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import teknoxera.bisawicara.R
 import teknoxera.bisawicara.adapter.SectionPagerAdapter
 import teknoxera.bisawicara.databinding.ActivityKamusBinding
 
@@ -14,6 +15,8 @@ class KamusActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         binding = ActivityKamusBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.title = getString(R.string.dictionary)
 
         val sectionsPagerAdapter = SectionPagerAdapter(this, supportFragmentManager)
         binding.viewPager.adapter = sectionsPagerAdapter
