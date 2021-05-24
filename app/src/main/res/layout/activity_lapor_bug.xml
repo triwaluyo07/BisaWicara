@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/archivo_black"
-        android:text="Ada Bug? \n Lapor Sekarang"
+        android:text="@string/ada_bug_n_lapor_sekarang"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

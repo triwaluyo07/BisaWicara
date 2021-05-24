@@ -12,4 +12,5 @@
     <string name="angka">Angka</string>
     <string name="splash_logo">splash logo</string>
     <string name="btn_lapor">LAPOR</string>
+    <string name="ada_bug_n_lapor_sekarang">Ada Bug? \n Lapor Sekarang</string>
 </resources>

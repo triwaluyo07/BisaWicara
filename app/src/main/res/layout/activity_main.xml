@@ -19,6 +19,7 @@
                 android:text="@string/dashb"
                 android:textSize="20sp"
                 android:textColor="#595959"/>
+
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
