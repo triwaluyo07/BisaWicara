@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Bisa Wicara</string>
     <string name="app_desc">Belajar Mudah Bahasa Isyarat</string>
+    <string name="team_name">TeknoXera</string>
     <string name="logo">Logo</string>
-    <string name="version">v.1.0.1</string>
+    <string name="version">v.1.0.1_build–052421–0223</string>
     <string name="dashb">DASHBOARD</string>
     <string name="dictionary">Kamus</string>
     <string name="test">Test Skill</string>
@@ -10,7 +11,16 @@
     <string name="report_bug">Laporkan Bug</string>
     <string name="huruf">Huruf</string>
     <string name="angka">Angka</string>
-    <string name="splash_logo">splash logo</string>
+    <string name="splash_logo">Splash Logo</string>
     <string name="btn_lapor">LAPOR</string>
-    <string name="ada_bug_n_lapor_sekarang">Ada Bug? \n Lapor Sekarang</string>
+    <string name="bug_text">Ada "Bug"?\nLapor sekarang!</string>
+    <string name="field_title">Dimana \"Bug\"-nya?</string>
+    <string name="bug_hint">Beritahu kami "Bug"-nya</string>
+    <string name="about_title">Tim Pengembangan Aplikasi</string>
+    <string name="uiux">UI/UX</string>
+    <string name="md_team">Samuel Deviko Kelvin Setiawan\nTri Waluyo (Development Team Leader)</string>
+    <string name="cloud">Layanan Cloud dan Basis Data</string>
+    <string name="cc_team">Dewi Tri Anggraini Soepomo\nPuspa Ramadhani</string>
+    <string name="mach_learn">Machine Learning dan Back-End</string>
+    <string name="ml_team">Luthfi Fathurahman\nYonvi Satria</string>
 </resources>

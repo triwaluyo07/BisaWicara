@@ -7,9 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".activity.LaporBugActivity">
 
-
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logo_img"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
@@ -18,31 +17,61 @@
         android:src="@drawable/gb_smartphone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/bug_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/archivo_black"
-        android:text="@string/ada_bug_n_lapor_sekarang"
+        android:text="@string/bug_text"
         android:textAlignment="center"
+        android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_img" />
+
+    <TextView
+        android:id="@+id/field_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/field_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bug_txt" />
+
+    <EditText
+        android:id="@+id/input_bug"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="@string/bug_hint"
+        android:ems="10"
+        android:fontFamily="@font/archivo_black"
+        android:gravity="start|top"
+        android:hint="@string/bug_hint"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_title" />
 
     <Button
         android:id="@+id/btn_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/archivo_black"
         android:text="@string/btn_lapor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/input_bug" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

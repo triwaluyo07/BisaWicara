@@ -13,33 +13,41 @@ import teknoxera.bisawicara.R
 
 class SplashScreenActivity : AppCompatActivity() {
 
-    lateinit var topAnimation: Animation
-    lateinit var bottomAnimation: Animation
-    lateinit var logo: ImageView
-    lateinit var txtLogo: TextView
+    private lateinit var topAnimation: Animation
+    private lateinit var bottomAnimation: Animation
+    private lateinit var logo: ImageView
+    private lateinit var txtLogo: TextView
+
+    companion object {
+        private const val delay: Long = 2000
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
         //Animation
-        topAnimation = AnimationUtils.loadAnimation(this,R.anim.top_animation);
-        bottomAnimation = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
+        topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation)
+        bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation)
 
         //Hooks
         logo = findViewById(R.id.logo)
         txtLogo = findViewById(R.id.txtGithubUser)
 
-        logo.setAnimation(topAnimation)
-        txtLogo.setAnimation(bottomAnimation)
-
+        logo.animation = topAnimation
+        txtLogo.animation = bottomAnimation
 
         Handler(Looper.getMainLooper()).postDelayed(
             {
-                startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+                startActivity(
+                    Intent(
+                        this@SplashScreenActivity,
+                        MainActivity::class.java
+                    )
+                )
                 finish()
             },
-            2000
+            delay
         )
 
     }
