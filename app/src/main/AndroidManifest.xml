@@ -11,11 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BisaWicara"
         tools:ignore="AllowBackup">
+        <activity android:name=".activity.CameraActivity"></activity>
         <activity
             android:name=".activity.SplashScreenActivity"
             android:theme="@style/Theme.BisaWicara.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -33,7 +35,7 @@
             android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@style/Theme.BisaWicara.NoActionBar"/>
+            android:theme="@style/Theme.BisaWicara.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
