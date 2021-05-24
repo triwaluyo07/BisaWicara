@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="teknoxera.bisawicara">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logoblue"
@@ -11,7 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BisaWicara"
         tools:ignore="AllowBackup">
-        <activity android:name=".activity.CameraActivity"></activity>
+        
+        <provider
+            android:authorities="teknoxera.bisawicara.file_provider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
+        <activity android:name=".activity.CameraActivity"/>
         <activity
             android:name=".activity.SplashScreenActivity"
             android:theme="@style/Theme.BisaWicara.NoActionBar">
@@ -36,6 +48,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:theme="@style/Theme.BisaWicara.NoActionBar" />
+
 
         <meta-data
             android:name="preloaded_fonts"

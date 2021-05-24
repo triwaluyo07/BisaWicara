@@ -1,8 +1,8 @@
 package teknoxera.bisawicara.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,7 +11,7 @@ import teknoxera.bisawicara.R
 import teknoxera.bisawicara.adapter.TestAdapter
 import teknoxera.bisawicara.data.KamusEntity
 import teknoxera.bisawicara.databinding.ActivityTestSkillBinding
-import teknoxera.bisawicara.viewmodel.KamusViewModel
+import teknoxera.bisawicara.viewmodel.MainViewModel
 
 class TestSkillActivity : AppCompatActivity() , ItemCallback
 {
@@ -25,7 +25,7 @@ class TestSkillActivity : AppCompatActivity() , ItemCallback
 
 		supportActionBar?.title = getString(R.string.test)
 
-		val viewModel = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory())[KamusViewModel::class.java]
+		val viewModel = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory())[MainViewModel::class.java]
 
 		val data = viewModel.getTestHuruf()
 
@@ -40,6 +40,10 @@ class TestSkillActivity : AppCompatActivity() , ItemCallback
 	}
 
 	override fun onItemClicked(data: KamusEntity) {
-		Toast.makeText(this,data.description,Toast.LENGTH_SHORT).show()
+		startActivity(
+			Intent(this, CameraActivity::class.java)
+				.putExtra(CameraActivity.EXTRA_DATA, data.id)
+				.putExtra(CameraActivity.EXTRA_TYPE, CameraActivity.TEST_HURUF)
+		)
 	}
 }

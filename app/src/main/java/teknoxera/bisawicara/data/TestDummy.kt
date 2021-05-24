@@ -209,9 +209,9 @@ object TestDummy {
 
         testHuruf.add(
             KamusEntity(
-                "test_A",
-                R.drawable.letter_a,
-                "A"
+                "test_z",
+                R.drawable.letter_z,
+                "Z"
             )
         )
         return testHuruf

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import teknoxera.bisawicara.ItemCallback
 import teknoxera.bisawicara.adapter.KamusAdapter
 import teknoxera.bisawicara.data.KamusEntity
-import teknoxera.bisawicara.viewmodel.KamusViewModel
+import teknoxera.bisawicara.viewmodel.MainViewModel
 import teknoxera.bisawicara.databinding.FragmentAngkaBinding
 
 
@@ -29,7 +29,7 @@ class FragmentAngka : Fragment(), ItemCallback {
         super.onViewCreated(view, savedInstanceState)
         if(activity != null)
         {
-            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[KamusViewModel::class.java]
+            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[MainViewModel::class.java]
             val data = viewModel.getListAngka()
 
             val adapter = KamusAdapter(this)
