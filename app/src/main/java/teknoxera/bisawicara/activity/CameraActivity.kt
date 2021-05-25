@@ -59,10 +59,10 @@ class CameraActivity : AppCompatActivity()
             imgDesc.text = ("${getString(R.string.huruf)}: ${kamusEntity.description}")
         }
 
-        takePict()
+        takePict(viewModel)
     }
 
-    private fun getPhotoFile(fileName: String): File
+    private fun getPhotoFile(fileName : String, vm : MainViewModel): File
     {
         // Use `getExternalFilesDir` on Context to access package-specific directories.
         val storageDirectory = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
@@ -81,11 +81,19 @@ class CameraActivity : AppCompatActivity()
     }
 
     @SuppressLint("QueryPermissionsNeeded")
-    fun takePict()
+    fun takePict(vm : MainViewModel)
     {
         binding.btnTakePict.setOnClickListener {
             val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            photoFile = getPhotoFile(FILE_NAME)
+
+            val id = kamusEntity.description
+
+            vm.addImage(
+                id,
+                FILE_NAME.toInt()
+            )
+
+            photoFile = getPhotoFile(FILE_NAME, vm)
 
             val fileProvider = FileProvider.getUriForFile(
                 this, "teknoxera.bisawicara.file_provider", photoFile
