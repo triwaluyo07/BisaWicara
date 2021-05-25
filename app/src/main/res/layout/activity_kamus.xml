@@ -12,9 +12,15 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/bluesky"
-        app:tabTextColor="@color/white"
-        app:tabIndicatorColor="@color/white"/>
+        android:background="@color/white"
+        android:elevation="12dp"
+        app:tabIconTint="@color/bluesky"
+        app:tabIndicator="@color/bluesky"
+        app:tabIndicatorColor="@color/bluesky"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="2dp"
+        app:tabRippleColor="@color/bluesky"
+        app:tabTextColor="@color/black" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"

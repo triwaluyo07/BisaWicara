@@ -2,6 +2,7 @@ package teknoxera.bisawicara.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.graphics.toColorInt
 import teknoxera.bisawicara.R
 
 class AboutActivity : AppCompatActivity()

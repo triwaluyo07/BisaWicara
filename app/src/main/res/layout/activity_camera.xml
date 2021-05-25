@@ -7,7 +7,6 @@
     tools:context=".activity.CameraActivity"
     android:padding="30dp">
 
-
     <TextView
         android:id="@+id/img_desc"
         android:layout_width="wrap_content"
@@ -28,13 +27,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_desc"
-        android:src="@drawable/gb_camera" />
+        android:src="@drawable/gb_camera"
+        android:contentDescription="@string/logo" />
 
     <Button
         android:id="@+id/btn_take_pict"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Take Pict"
+        android:layout_marginEnd="8dp"
+        android:text="@string/take_shot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_check"
         app:layout_constraintStart_toStartOf="parent" />
@@ -43,10 +44,9 @@
         android:id="@+id/btn_check"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Check"
+        android:layout_marginStart="8dp"
+        android:text="@string/check"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_take_pict" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

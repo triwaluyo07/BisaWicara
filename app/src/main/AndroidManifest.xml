@@ -23,7 +23,9 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_provider" />
         </provider>
-        <activity android:name=".activity.CameraActivity"/>
+        <activity
+            android:name=".activity.CameraActivity"
+            android:parentActivityName=".activity.TestSkillActivity"/>
         <activity
             android:name=".activity.SplashScreenActivity"
             android:theme="@style/Theme.BisaWicara.NoActionBar">
