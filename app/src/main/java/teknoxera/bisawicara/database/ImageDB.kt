@@ -23,8 +23,7 @@ abstract class ImageDB : RoomDatabase()
 				{
 					INS = Room.databaseBuilder(
 						con.applicationContext,
-						ImageDB::class.java,
-						"imageDB"
+						ImageDB::class.java, "image_store"
 					).build()
 				}
 			return INS

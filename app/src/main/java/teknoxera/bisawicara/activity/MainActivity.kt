@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        IntentActivity()
+        intentActivity()
     }
 
-    fun IntentActivity()
+    private fun intentActivity()
     {
         binding.cardKamus.setOnClickListener {
             val intent = Intent(this, KamusActivity::class.java)

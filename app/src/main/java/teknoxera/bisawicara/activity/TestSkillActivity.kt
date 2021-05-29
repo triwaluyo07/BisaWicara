@@ -25,7 +25,8 @@ class TestSkillActivity : AppCompatActivity() , ItemCallback
 
 		supportActionBar?.title = getString(R.string.test)
 
-		val viewModel = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory())[MainViewModel::class.java]
+		val viewModel = ViewModelProvider(this)
+			.get(MainViewModel(application)::class.java)
 
 		val data = viewModel.getTestHuruf()
 

@@ -38,9 +38,8 @@ class CameraActivity : AppCompatActivity()
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val viewModel = ViewModelProvider(
-            this, ViewModelProvider.NewInstanceFactory()
-        )[MainViewModel::class.java]
+        val viewModel = ViewModelProvider(this)
+            .get(MainViewModel(application)::class.java)
 
         val id = intent.getStringExtra(EXTRA_DATA)
         val type = intent.getStringExtra(EXTRA_TYPE)
@@ -59,14 +58,14 @@ class CameraActivity : AppCompatActivity()
             imgDesc.text = ("${getString(R.string.huruf)}: ${kamusEntity.description}")
         }
 
-        takePict(viewModel)
+        takePict()
     }
 
-    private fun getPhotoFile(fileName : String, vm : MainViewModel): File
+    private fun getPhotoFile(): File
     {
         // Use `getExternalFilesDir` on Context to access package-specific directories.
         val storageDirectory = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-        return File.createTempFile(fileName, ".jpg", storageDirectory)
+        return File.createTempFile(FILE_NAME, ".jpg", storageDirectory)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
@@ -81,19 +80,12 @@ class CameraActivity : AppCompatActivity()
     }
 
     @SuppressLint("QueryPermissionsNeeded")
-    fun takePict(vm : MainViewModel)
+    fun takePict()
     {
         binding.btnTakePict.setOnClickListener {
             val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
-            val id = kamusEntity.description
-
-            vm.addImage(
-                id,
-                FILE_NAME.toInt()
-            )
-
-            photoFile = getPhotoFile(FILE_NAME, vm)
+            photoFile = getPhotoFile()
 
             val fileProvider = FileProvider.getUriForFile(
                 this, "teknoxera.bisawicara.file_provider", photoFile
