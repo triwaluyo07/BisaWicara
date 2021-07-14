@@ -39,7 +39,8 @@ class LaporBugActivity : AppCompatActivity()
 			{
 				startActivity(
 					Intent(
-						Intent.ACTION_VIEW, Uri.parse("${base_url}${temp_text}${input_bug.text}")
+						Intent.ACTION_VIEW,
+						Uri.parse("${base_url}${temp_text}${input_bug.text}")
 					)
 				)
 			}

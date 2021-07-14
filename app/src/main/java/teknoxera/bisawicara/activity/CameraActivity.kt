@@ -63,7 +63,6 @@ class CameraActivity : AppCompatActivity()
 
     private fun getPhotoFile(): File
     {
-        // Use `getExternalFilesDir` on Context to access package-specific directories.
         val storageDirectory = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         return File.createTempFile(FILE_NAME, ".jpg", storageDirectory)
     }
